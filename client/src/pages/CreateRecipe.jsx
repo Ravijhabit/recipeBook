@@ -1,3 +1,7 @@
 export const CreateRecipe = () =>{
-    return <div>CreateRecipe</div>;
-};
+    return( 
+        <div className="create-recipe">
+            <h2></h2>
+        </div>
+    );
+}; 
