@@ -1,10 +1,10 @@
 .container{
     display: flex;
     flex-direction: column;
-    width:60%;
+    width:400px;
     padding:20px 10px;
     align-items:center;
-    margin: 0 auto;
+    margin: 20px auto;
 }
 .createForm{
     display: flex;
@@ -35,4 +35,18 @@
 }
 .createForm>button{
     background:rgb(4, 177, 4);
+}
+@media(max-width:450px){
+    .container{
+        width:90%;
+        padding: 4px 10px;
+    }
+    .createForm>label{
+        width:330px;
+    }
+}
+@media(max-width:360px){
+    .createForm>label{
+        width:260px;
+    }
 }

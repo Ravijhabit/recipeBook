@@ -23,6 +23,9 @@ export const Home = () =>{
         };
 
         const fetchSavedRecipe = async()=>{
+            if(userID == 0){
+                return ;
+            }
             try{
                 const response = await axios.get('/recipes/savedRecipes/ids/'+userID,{
                     headers:{authorization:cookies.access_token}

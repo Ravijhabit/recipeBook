@@ -15,3 +15,20 @@
     font-weight:bold;
     font-size:20px;
 }
+.logout{
+    background:white;
+    padding:16px; 
+    cursor:pointer; 
+    font-weight:bold; 
+    color:green; 
+    border-radius:40px;
+}
+@media(max-width:600px){
+    .navPills{
+        font-size:12px;
+    }
+    .navbar>button{
+        font-size:12px;
+        padding:4px;
+    }
+}

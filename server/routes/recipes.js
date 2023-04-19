@@ -19,7 +19,6 @@ router.get('/',async(req,res)=>{
 router.post('/', verifyToken, async(req,res)=>{
     const recipe = new RecipeModel(req.body);
     try{    
-        // console.log(process.env.REMOVE_BG_API_KEY);
         const response = await recipe.save();
         res.json(response);
     }catch(err){

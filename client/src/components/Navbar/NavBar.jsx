@@ -22,7 +22,7 @@ export const NavBar = () =>{
                 <>
                     <Link className={css.navPills} to='/create-recipe'>Create Recipe</Link>
                     <Link className={css.navPills} to='/saved-recipes'>Saved Recipe</Link> 
-                    <button onClick={logout} style={{background:'white', padding:'16px', cursor:'pointer', fontWeight:'bold', color:'green', borderRadius:'40px'}}>Logout</button>
+                    <button onClick={logout} className={css.logout}>Logout</button>
                 </>
             }
         </div>

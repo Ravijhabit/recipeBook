@@ -1,6 +1,4 @@
 import css from './singleRecipe.module.css';
-import image from '../../assets/chola.png';
-// const SingleRecipe = ({name, type, rating, ingredient, instructions, image, cookingTime })=>{
 const SingleRecipe = ({
         name='CholaBhatura', 
         type='Starters', 
@@ -20,7 +18,7 @@ const SingleRecipe = ({
                 <section className={css.recipeHeader}>
                     <small>{type.toUpperCase()}</small>
                     <h1>{name}</h1>
-                    {/* starRating */}{rating}
+                    {rating}
                 </section>
                 <section className={css.instructionContainer}>
                     <h2>Method</h2>
@@ -63,9 +61,6 @@ const SingleRecipe = ({
                     >
                     {isRecipeSaved(id)? 'Saved':'Save'}
                 </button>}
-                {/* Save button */}
-                {/* Expected calories */}
-                {/* {ingredient.map()} */}
             </section>
         </div>
     );

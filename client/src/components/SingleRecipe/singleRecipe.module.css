@@ -26,10 +26,10 @@
 }
 .foodImage{
     position:relative;
-    width:300px;
-    height:200px;
+    width:200px;
+    height:150px;
     left:30%;
-    margin-top:-10px;
+    margin-top:20px;
 }
 .instructionsContainer{
     margin:20px;
@@ -80,4 +80,84 @@
     border-radius: 16px;
     cursor: pointer;
     margin:20px 0 0;
+}
+@media(max-width:920px){
+    .foodImage{
+        height:100px;
+        width:150px;
+    }
+}
+@media(max-width:750px){
+    .foodImage{
+        height:80px;
+        width:120px;
+        margin-top:30px;
+    }
+    .cookingTime{
+        padding:6px 6px;
+    }
+    .right{
+        padding:30px 10px 10px;
+        width:25%;
+    }
+    .right>h3{
+        font-size:16px;
+    }
+}
+@media(max-width:620px){
+    .foodImage{
+        height:60px;
+        width:100px;
+        margin-top:50px;
+    }
+    .container{
+        padding:10px 20px;
+    }
+    .steps{
+        font-size:12px;
+    }
+    .recipeHeader>h1{
+        font-size:24px;
+    }
+    .left h2{
+        font-size:16px;
+    }
+}
+@media(max-width:600px){
+    .imageContainer{
+        display: none;
+    }
+    .right{
+        width:35%;
+    }
+}
+@media(max-width:450px){
+    .container{
+        padding:10px 10px;
+    }
+    .left{
+        width:50%;
+    }
+    .recipeHeader>h1{
+        font-size:16px;
+    }
+    .left h2{
+        font-size:12px;
+    }
+    .steps{
+        font-size:8px;
+    }
+    .right{
+        font-size:8px;
+    }
+    .right>h3{
+        font-size:12px;
+    }
+    .cookingTime>svg{
+        width:10px;
+        height:10px;
+    }
+    .cookingTime>p,.cookingTime>h6{
+        font-size:10px;
+    }
 }
