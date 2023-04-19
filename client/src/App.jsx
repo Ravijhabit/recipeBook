@@ -10,7 +10,7 @@ import NotFound from './components/NotFound';
 import axios from 'axios';
 import SingleRecipe from './components/SingleRecipe/SingleRecipe';
 import Footer from './components/Navbar/Footer';
-axios.defaults.baseURL='https://recipe-api-esip.onrender.com:3001/';
+axios.defaults.baseURL='https://recipe-api-esip.onrender.com';
 function App() {
   return (
     <div className="App">
