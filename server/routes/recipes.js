@@ -2,12 +2,14 @@ import express from 'express';
 import { RecipeModel } from "../models/Recipes.js";
 import { UserModel } from '../models/User.js';
 import { verifyToken } from './users.js';
+import * as dotenv from 'dotenv';
+dotenv.config();
 
 const router = express.Router();
 
 router.get('/',async(req,res)=>{
     try{
-        const response = await RecipeModel.find({}); 
+        const response = await RecipeModel.find({});
         res.json(response);
     }catch(err){
         res.json(err);
@@ -15,12 +17,13 @@ router.get('/',async(req,res)=>{
 });
 
 router.post('/', verifyToken, async(req,res)=>{
-    const recipe = new RecipeModel(req.body.recipe);
+    const recipe = new RecipeModel(req.body);
     try{    
+        // console.log(process.env.REMOVE_BG_API_KEY);
         const response = await recipe.save();
         res.json(response);
     }catch(err){
-        res.json(err);
+        res.status(401).json(err);
     }
 });
 
@@ -32,7 +35,7 @@ router.put('/', verifyToken, async (req,res)=>{
         await user.save();
         res.json({savedRecipes:user.savedRecipes });
     }catch(err){
-        res.json(err);
+        res.status(401).json(err);
     }
 });
 

@@ -1,0 +1,17 @@
+.navbar{
+    display: flex;
+    justify-content: space-evenly;
+    padding:20px 10px;
+    background:green;
+    position: sticky;
+    top:10px;
+    margin-bottom: 20px;
+    z-index:4;
+    align-items: center;
+}
+.navPills{
+    color:white;
+    text-decoration: none;
+    font-weight:bold;
+    font-size:20px;
+}

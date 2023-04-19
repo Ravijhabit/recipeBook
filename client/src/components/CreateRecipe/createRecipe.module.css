@@ -1,0 +1,38 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    width:60%;
+    padding:20px 10px;
+    align-items:center;
+    margin: 0 auto;
+}
+.createForm{
+    display: flex;
+    flex-direction: column;
+    padding:20px 0;
+}
+.createForm>label{
+    display: flex;
+    flex-direction: column;
+    width:350px;
+    justify-content: space-evenly;
+    padding:10px 0;
+}
+.createForm input,.createForm select{
+    padding:10px;
+    border-radius: 8px;
+    margin:10px 0;
+}
+.addContainer>input{
+    margin:10px 0;
+}
+.addContainer>button,.createForm>button{
+    padding:8px;
+    border-radius:30px;
+    cursor: pointer;
+    background:greenyellow;
+    font-weight: bold;
+}
+.createForm>button{
+    background:rgb(4, 177, 4);
+}

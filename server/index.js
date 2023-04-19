@@ -22,5 +22,5 @@ db.once('open', function(){
 });
 
 app.listen(3001, ()=>{
-    console.log('Server Started');
+    console.log('Server Started at port 3001');
 });

@@ -1,4 +1,8 @@
-.App{
+*{
+    margin:0;
+    padding:0;
+}
+/* .App{
     display:flex;
     flex-direction: column;
     justify-content: center;
@@ -115,4 +119,4 @@ img{
 p{
     max-width: 400px;
     font-size:12px;
-}
+} */

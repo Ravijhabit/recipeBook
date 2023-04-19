@@ -5,14 +5,23 @@ const RecipeSchema = new mongoose.Schema({
         type:String, 
         required:true,
     },
+    type:{
+        type:String,
+        enum:['Starters','Main-Course','Dessert'],
+        required:true
+    },
+    rating:{
+        type:String,
+        default:'4.3'
+    },
     ingredients:[{
         type:String,
         required:true,
     }],
-    instructions:{
+    instructions:[{
         type:String,
         required:true,
-    },
+    }],
     imageUrl:{
         type:String,
         required:true,
@@ -24,7 +33,6 @@ const RecipeSchema = new mongoose.Schema({
     userOwner:{
         type:mongoose.Schema.Types.ObjectId,
         ref:'users',
-        required:true,
     },
 });
 

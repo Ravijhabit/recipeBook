@@ -51,12 +51,11 @@ const Register = () => {
     const onSubmit = async(event)=>{
         event.preventDefault();
         try{
-            await axios.post('http://localhost:3001/auth/register', {
+            const {data} = await axios.post('http://localhost:3001/auth/register', {
                 username,
                 password,
             });
-            console.log('yes');
-            alert('Registration Completed! Now Login.!');
+            alert(`${data.message}`);
             setUsername('');
             setPassword('');
         }catch(err){

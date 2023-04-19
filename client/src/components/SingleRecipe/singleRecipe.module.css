@@ -1,0 +1,83 @@
+.instructions::-webkit-scrollbar{
+    width:10px;
+}
+.instructions::-webkit-scrollbar-thumb{
+    background:rgb(247, 176, 45);
+    border-radius:5px;
+}
+.instructions{
+    height: 250px;
+    margin-top:20px;
+    overflow-y: scroll;
+}
+.container{
+    margin:20px auto;
+    width:80%;
+    border:2px solid black;
+    padding:30px;
+    display: flex;
+    justify-content: space-evenly;
+    background:rgb(35, 32, 51);
+    color:rgba(255, 235, 135, 0.801);
+    border-radius: 10px;
+}
+.imageContainer{
+    position: absolute;
+}
+.foodImage{
+    position:relative;
+    width:300px;
+    height:200px;
+    left:30%;
+    margin-top:-10px;
+}
+.instructionsContainer{
+    margin:20px;
+}
+.recipeHeader>h1{
+    margin:20px 0 10px 0;
+    font-size:32px;
+}
+.recipeHeader{
+    margin:20px 0;
+}
+.left{
+    width:70%;
+}
+.right{
+    width:20%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(253, 248, 223);
+    padding:20px;
+    border-radius:20px;
+    color:black;
+}
+.steps{
+    padding:10px 0;
+}
+.steps>h4{
+    margin-bottom:4px;
+}
+.right>h6{
+    padding:6px 16px;
+}
+.cookingTime{
+    display: flex;
+    padding:6px 16px;
+    align-items: center;
+    gap:8px;
+    font-size:16px;
+}
+.cookingTime>svg{
+    width:20px;
+    height:20px;
+}
+.saveButton{
+    background:green;
+    color:white;
+    padding:10px;
+    border-radius: 16px;
+    cursor: pointer;
+    margin:20px 0 0;
+}
