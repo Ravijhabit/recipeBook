@@ -13,7 +13,7 @@ export const SavedRecipes = () =>{
     useEffect(()=>{
         const fetchSavedRecipe = async()=>{
             try{
-                const response = await axios.get('http://localhost:3001/recipes/savedRecipes/'+userID,{
+                const response = await axios.get('/recipes/savedRecipes/'+userID,{
                     headers:{authorization:cookies.access_token}
                 });
                 setSavedRecipes(response.data.savedRecipes);
