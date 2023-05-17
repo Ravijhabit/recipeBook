@@ -12,10 +12,16 @@ const port = process.env.PORT || 4000;
 app.use(express.json());
 app.use(cors({
     credentials:true,
-    origin:'https://recipe-book-evm3.onrender.com'
+    //origin:'https://recipe-book-evm3.onrender.com'
+    origin:'*'
 }));
 app.use('/auth', userRouter);
 app.use('/recipes',recipesRouter);
+app.post('/randomnumbergenerator', (req,res)=>{
+    const {minValue, maxValue} = req.body;
+    console.log(minValue, maxValue);
+    res.json(minValue+Math.random()*(maxValue-minValue));
+});
 
 mongoose.connect(process.env.MONGO_URL);
 const db = mongoose.connection;
