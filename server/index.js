@@ -18,10 +18,8 @@ app.use(cors({
 app.use('/auth', userRouter);
 app.use('/recipes',recipesRouter);
 app.post('/randomnumbergenerator', (req,res)=>{
-    console.log(req.body);
-    const {minValue, maxValue} = req.body;
-    console.log(minValue, maxValue);
-    res.json(minValue+Math.random()*(maxValue-minValue));
+    const {minValue, maxValue} = req.query;
+    res.json(Math.floor(parseInt(minValue)+Math.random()*(maxValue-minValue)));
 });
 
 mongoose.connect(process.env.MONGO_URL);
