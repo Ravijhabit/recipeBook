@@ -18,6 +18,7 @@ app.use(cors({
 app.use('/auth', userRouter);
 app.use('/recipes',recipesRouter);
 app.post('/randomnumbergenerator', (req,res)=>{
+    console.log(req.body);
     const {minValue, maxValue} = req.body;
     console.log(minValue, maxValue);
     res.json(minValue+Math.random()*(maxValue-minValue));
